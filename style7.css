@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fullscreen Video Header */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the header */
+    z-index: -1; /* Send video behind the text */
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Content Below the Header */
+.container {
+    margin-top: 0;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Main and Aside Styles */
+main {
+    flex: 2;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    text-align: justify; 
+}
+
+aside {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Related News Styling */
+.related-news-item {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: justify; 
+}
+
+.related-news-item h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+    background: linear-gradient(90deg, #ff6f91, #0073e6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+aside h3 {
+    background: linear-gradient(90deg, #ff6f91, #0073e6);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: justify; 
+}
+
+/* Footer Styling */
+footer {
+    text-align: center; 
+    padding: 10px;
+    background: linear-gradient(90deg, #ff6f91, #0073e6);
+    color: white;
+    position: relative;
+    margin-top: auto;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    main, aside {
+        width: 100%;
+        flex: none;
+        margin: 0;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+}
